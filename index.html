@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income and Expenses Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Income and Expense Tracker</h1>
+
+    <form id="transaction-form">
+      <input type="text" id="description" placeholder="Enter description">
+      <input type="number" id="amount" placeholder="Enter amount">
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expenses</option>
+      </select>
+      <div class="form-button">
+        <button type="submit">Add Transactions</button>
+        <button type="button" id="reset-button">Reset</button>
+      </div>
+    </form>
+
+    <div class="summary">
+      <div> <strong>Income:</strong> $<span id="total-income">0</span></div>
+      <div><strong>Expenses:</strong> $<span id="total-expenses">0</span></div>
+      <div><strong>Balance:</strong> $<span id="balance">0</span></div>
+    </div>
+
+    <div class="filters">
+        <label><input type="radio" name="filter" value="all" checked> All </label>
+        <label><input type="radio" name="filter" value="income"> Income </label>
+        <label><input type="radio" name="filter" value="expense"> Expense </label>
+    </div>
+
+    <div class="transactions">
+      <h2>Transactions</h2>
+      <ul id="transactions-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
